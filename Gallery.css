@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+.ribbon {
+    font-size: 22px;
+    width: 500px;
+    background-color: var(--bs-success);
+    color: var(--bs-success);
+    text-align: center;
+    padding: 1em 2em;
+    margin: 2em auto;
+    position: relative;
+}
+
+.ribbon:before {
+    content: "";
+    position: absolute;
+    border: 1.5em solid var(--bs-success);
+    left: -2em;
+    border-left-color: transparent;
+}
+
+.ribbon:after {
+    content: "";
+    position: absolute;
+    border: 1.5em solid var(--bs-success);
+    right: -2em;
+    border-right-color: transparent;
+}
+
+.h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color:black;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50);
+    animation: animate 4s linear infinite;
+
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+
+
+.team-item {
+    display: inline-block;
+    background: #fefefe;
+    border: 2px solid #fafafa;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0px 2px 15px 0px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 15px 15px 5px 15px;
+    background: -webkit-linear-gradient(45deg, #fff, #f9f9f9);
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.photo {
+    
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 1px;
+    grid-template-columns: repeat(4, 1fr);
+
+    }
+
+
+
+    @media (max-width: 430px) {
+        .ribbon {
+            padding: 17px 5px;
+            width: 275px;
+            margin: 15 auto; 
+            text-align: center; 
+          }
+          
+        .row {
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+    }
